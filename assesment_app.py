@@ -54,3 +54,8 @@ while selection in (0, 1, 2, 3):
     selection = int(input("Please Enter your response:.... "))
 
     if selection == 1:
+        print("Getting all the list of students in the database...\n")
+        if len(students_list) == 0:
+            print("There are no student records in the database... try adding some...")
+        else:
+            print_std_list(students_list)
