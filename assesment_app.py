@@ -36,7 +36,7 @@ def calculate_stud_average_mark(students):
 
 def print_stud_details(students):
     print("Name : {}, Average mark {} ".format(
-        students["Name"], calculate_stud_average_mark(students)))
+        students["name"], calculate_stud_average_mark(students)))
 
 # function for printing list of students
 
@@ -59,3 +59,7 @@ while selection in (0, 1, 2, 3):
             print("There are no student records in the database... try adding some...")
         else:
             print_std_list(students_list)
+    elif selection == 2:
+        print("Adding a new student Record to database....")
+        students_list.append(add_stud_info())
+        print("Record Added...")
