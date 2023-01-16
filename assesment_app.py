@@ -42,7 +42,8 @@ def print_stud_details(students):
 
 
 def print_std_list(students_list):
-    for student in students_list:
+    for id, student in enumerate(students_list):
+        print("ID: {}".format(id))
         print_stud_details(student)
 
 
@@ -63,3 +64,15 @@ while selection in (0, 1, 2, 3):
         print("Adding a new student Record to database....")
         students_list.append(add_stud_info())
         print("Record Added...")
+
+    elif selection == 3:
+        if len(students_list) == 0:
+            print(
+                "Sorry there are no student records in the database.... Try adding some...")
+        else:
+            print("Adding mark a student record...")
+            id = int(
+                input("What is the ID of the student whose mark you want to add?... "))
+            mark = float(input("Enter the mark you want to add... "))
+            add_std_marks(students_list[id], mark)
+            print("Mark added successfully...")
