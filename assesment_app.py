@@ -38,6 +38,13 @@ def print_stud_details(students):
     print("Name : {}, Average mark {} ".format(
         students["Name"], calculate_stud_average_mark(students)))
 
+# function for printing list of students
+
+
+def print_std_list(students_list):
+    for student in students_list:
+        print_stud_details(student)
+
 
 # USer menu
 print("\n\nWelcome to the Students Continuous assesment app")
