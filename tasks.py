@@ -12,17 +12,19 @@ def add_stud_info():
     marks = input(
         "Please enter your results seperating them with a comma:\n ...  ")
     if len(marks) != 0:
-        marks = [int(mark) for mark in marks.split(",")]
+        students_data = Student(name)
+        Student.marks = [int(mark) for mark in marks.split(",")]
+        return students_data
     else:
-        marks = []
-    students = {
-        'name': name,
-        'marks': marks
-    }
-    return students
+        Student.marks = []
+    students_data = Student(name)
+
+    return students_data
 
 
 # method to add student marks to student data
+
+
 def add_std_marks(students, mark):
     students["marks"].append(mark)
 
