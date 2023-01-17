@@ -26,12 +26,12 @@ def add_stud_info():
 
 
 def add_std_marks(students, mark):
-    students["marks"].append(mark)
+    Student.marks.append(mark)
 
 
 # compute the avarage mark of the student
 def calculate_stud_average_mark(students):
-    marks = students["marks"]
+    marks = Student.mark
     if len(marks) == 0:
         return 0
     else:
@@ -42,7 +42,7 @@ def calculate_stud_average_mark(students):
 
 def print_stud_details(students):
     print("Name : {}, Average mark {} ".format(
-        students["name"], calculate_stud_average_mark(students)))
+        Student.name, calculate_stud_average_mark(students)))
 
 # function for printing list of students
 
