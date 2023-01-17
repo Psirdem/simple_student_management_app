@@ -1,3 +1,10 @@
+# creating a student class
+class Student:
+    def __init__(self, name) -> None:
+        self.name = name
+        self.marks = []
+
+
 # add student data
 
 def add_stud_info():
