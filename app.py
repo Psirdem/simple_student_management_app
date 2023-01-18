@@ -34,7 +34,7 @@ def user_menu():
                 id = int(
                     input("What is the ID of the student whose mark you want to add?... "))
                 mark = float(input("Enter the mark you want to add... "))
-                add_std_marks(students_list[id], mark)
+                students_list[id].add_mark(mark)
                 print("Mark added successfully...")
 
 

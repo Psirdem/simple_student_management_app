@@ -4,6 +4,9 @@ class Student:
         self.name = name
         self.marks = marks
 
+    def add_mark(self, mark):
+        self.marks.append(mark)
+
         # compute the avarage mark of the student
     def avarage(self):
         marks = self.marks
@@ -30,10 +33,6 @@ def add_stud_info():
 
 
 # method to add student marks to student data
-
-
-def add_std_marks(students, mark):
-    students.marks.append(mark)
 
 
 # function for printing student records
