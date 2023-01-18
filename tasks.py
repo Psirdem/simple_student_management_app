@@ -4,6 +4,15 @@ class Student:
         self.name = name
         self.marks = marks
 
+        # compute the avarage mark of the student
+    def avarage(self):
+        marks = self.marks
+        # print(marks)
+        if len(marks) == 0:
+            return 0
+        else:
+            return sum(marks)/len(marks)
+
 
 # add student data
 
@@ -27,21 +36,12 @@ def add_std_marks(students, mark):
     students.marks.append(mark)
 
 
-# compute the avarage mark of the student
-def calculate_stud_average_mark(students):
-    marks = students.marks
-    # print(marks)
-    if len(marks) == 0:
-        return 0
-    else:
-        return sum(marks)/len(marks)
-
 # function for printing student records
 
 
 def print_stud_details(students):
     print("Name : {}, Average mark {} ".format(
-        students.name, calculate_stud_average_mark(students)))
+        students.name, students.avarage()))
 
 # function for printing list of students
 
