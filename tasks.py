@@ -1,8 +1,8 @@
 # creating a student class
 class Student:
-    def __init__(self, name) -> None:
+    def __init__(self, name, marks) -> None:
         self.name = name
-        self.marks = []
+        self.marks = marks
 
 
 # add student data
@@ -12,13 +12,11 @@ def add_stud_info():
     marks = input(
         "Please enter your results seperating them with a comma:\n ...  ")
     if len(marks) != 0:
-        students_data = Student(name)
-        Student.marks = [int(mark) for mark in marks.split(",")]
-        return students_data
+        marks = [int(mark) for mark in marks.split(",")]
     else:
-        Student.marks = []
-    students_data = Student(name)
-
+        marks = []
+    students_data = Student(name, marks)
+    print(students_data.marks)
     return students_data
 
 
@@ -26,12 +24,13 @@ def add_stud_info():
 
 
 def add_std_marks(students, mark):
-    Student.marks.append(mark)
+    students.marks.append(mark)
 
 
 # compute the avarage mark of the student
 def calculate_stud_average_mark(students):
-    marks = Student.mark
+    marks = students.marks
+    # print(marks)
     if len(marks) == 0:
         return 0
     else:
@@ -42,7 +41,7 @@ def calculate_stud_average_mark(students):
 
 def print_stud_details(students):
     print("Name : {}, Average mark {} ".format(
-        Student.name, calculate_stud_average_mark(students)))
+        students.name, calculate_stud_average_mark(students)))
 
 # function for printing list of students
 
