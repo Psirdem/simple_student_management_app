@@ -3,6 +3,7 @@ class Student:
     def __init__(self, name, marks) -> None:
         self.name = name
         self.marks = marks
+# method to add student marks to student data
 
     def add_mark(self, mark):
         self.marks.append(mark)
@@ -30,9 +31,6 @@ def add_stud_info():
     students_data = Student(name, marks)
     print(students_data.marks)
     return students_data
-
-
-# method to add student marks to student data
 
 
 # function for printing student records
