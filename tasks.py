@@ -17,6 +17,12 @@ class Student:
         else:
             return sum(marks)/len(marks)
 
+    # function for printing student records
+
+    def details(self):
+        print("Name : {}, Average mark {} ".format(
+            self.name, self.avarage()))
+
 
 # add student data
 
@@ -33,17 +39,10 @@ def add_stud_info():
     return students_data
 
 
-# function for printing student records
-
-
-def print_stud_details(students):
-    print("Name : {}, Average mark {} ".format(
-        students.name, students.avarage()))
-
 # function for printing list of students
 
 
 def print_std_list(students_list):
     for id, student in enumerate(students_list):
         print("ID: {}".format(id))
-        print_stud_details(student)
+        student.details()
